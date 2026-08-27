@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased transition-colors duration-200;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html.dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* AI Pulse Animation */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+/* Dark mode base overrides */
+.dark .bg-white { background-color: rgb(15 23 42) !important; }
+.dark .bg-slate-50 { background-color: rgb(15 23 42) !important; }
+.dark .border-slate-200 { border-color: rgb(30 41 59) !important; }
+.dark .border-slate-100 { border-color: rgb(30 41 59) !important; }
+.dark .text-slate-900 { color: rgb(248 250 252) !important; }
+.dark .text-slate-800 { color: rgb(241 245 249) !important; }
+.dark .text-slate-700 { color: rgb(226 232 240) !important; }
+.dark .text-slate-600 { color: rgb(203 213 225) !important; }
+.dark .text-slate-500 { color: rgb(148 163 184) !important; }
+.dark .text-slate-400 { color: rgb(100 116 139) !important; }
+.dark .bg-slate-100 { background-color: rgb(30 41 59) !important; }
+.dark .shadow-card { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -1px rgba(0,0,0,0.2) !important; }
