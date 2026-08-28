@@ -28,13 +28,11 @@ import { useTheme } from '../context/ThemeContext';
 import Badge from '../components/common/Badge';
 
 const NAV_ITEMS = [
-  { name: 'Home', path: '/', icon: HomeIcon },
-  { name: 'About GIETU', path: '/about-giet', icon: Landmark },
-  { name: 'Courses', path: '/courses', icon: GraduationCap },
-  { name: 'AI Assistant', path: '/ai-assistant', icon: Bot, highlight: true },
   { name: 'My Application', path: '/application', icon: FileText },
   { name: 'Documents', path: '/documents', icon: Files, badgeKey: 'pendingDocs' },
   { name: 'App Status', path: '/application-status', icon: Activity },
+  { name: 'Courses', path: '/courses', icon: GraduationCap },
+  { name: 'AI Assistant', path: '/ai-assistant', icon: Bot, highlight: true },
   { name: 'Notifications', path: '/notifications', icon: Bell, badgeKey: 'unreadNotifs' },
   { name: 'Contact Us', path: '/contact', icon: Phone },
   { name: 'Profile', path: '/profile', icon: User },
@@ -63,7 +61,7 @@ export default function StudentLayout() {
       {/* ====== DESKTOP SIDEBAR ====== */}
       <aside className={`hidden md:flex md:w-64 lg:w-72 flex-col fixed inset-y-0 z-30 border-r transition-colors duration-200 ${isDark ? 'bg-slate-900 border-slate-800' : 'bg-slate-900 border-slate-800'}`}>
         {/* Logo */}
-        <Link to="/" className="h-16 flex items-center px-6 border-b border-slate-800/80 bg-slate-950/40 hover:bg-slate-950/60 transition-colors">
+        <Link to="/application" className="h-16 flex items-center px-6 border-b border-slate-800/80 bg-slate-950/40 hover:bg-slate-950/60 transition-colors">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-white p-0.5 shadow-md flex items-center justify-center shrink-0">
               <img src="/giet-logo.png" alt="GIET University Logo" className="w-full h-full object-contain" />
